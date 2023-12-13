@@ -9,10 +9,7 @@ body{
 }
 
 .background{
-    background-image: linear-gradient(rgba(14, 14, 14, 0.5), rgba(22, 21, 21, 0.5)), url("https://miro.medium.com/v2/resize:fit:1000/1*djOWBfUNhFUPeDHchV9cEQ.jpeg");
     height: 90vh;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .hr{
@@ -25,7 +22,7 @@ body{
 }
 .hr:hover
 {
-    background: #0075C5;
+    background: #350B71;
     width: 80%;
 }
 a{
@@ -135,8 +132,27 @@ height: 100%;
 /* project page */
 
 .bks{
-    background: #333;
-    border-radius: 10px;
+    border: 1px solid #0075C5;
+    background: rgba(0,0,0,0.1);
+    border-radius: 8px;
+    font-size: 20px;
+    box-shadow: 20px 20px 50px rgba(56, 56, 56, 0.349);
+
+}
+.ghj a:hover{
+    background: #0075C5;
+    color: #fff;
+}
+
+.glow{
+    background-color: 1px solid rgb(112 0 255 / 0.7);
+    height: 100px;
+    width: 100px;
+    filter: blur(120px);
+    position: absolute;
+    top: 70px;
+    left: 100px;
+    z-index: -10;
 }
 
 .tkl{
@@ -166,3 +182,136 @@ height: 100%;
 	}
 }
 
+
+
+.body-background {
+    isolation: isolate;
+    position: absolute;
+    filter: blur(7vh);
+    z-index: -1;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+  }
+  
+  .circle {
+    border-radius: 50%;
+    mix-blend-mode: screen;
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+  }
+  
+  .circle-1 {
+    width: 40vh;
+    height: 40vh;
+    background: purple;
+    animation: 6s move-circle-1 linear infinite;
+    top: 4%; 
+    left: 10%;
+    transform: translate(-50%, -50%); 
+    filter: blur(8vh);
+
+  }
+  
+  .circle-2 {
+    width: 30vh;
+    height: 30vh;
+    background: darkblue;
+    animation: 5s move-circle-2 linear infinite;
+    top: 40%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    filter: blur(8vh);
+  }
+  
+  .circle-3 {
+    width: 70vh;
+    height: 70vh;
+    background: indigo;
+    animation: 15s move-circle-3 linear infinite;
+    top: 40%; 
+    left: 35%;
+    transform: translate(-50%, -50%); 
+    filter: blur(8vh);
+  }
+  
+  .circle-4 {
+    width: 100vh;
+    height: 100vh;
+    background: midnightblue;
+    animation: 8s move-circle-4 linear infinite;
+    left: 80%;
+    top: 20%;
+    filter: blur(15vh);
+  }
+  
+  .content {
+    text-align: center;
+  }
+  
+  .pane {
+    box-shadow: 20px 20px 50px rgba(56, 56, 56, 0.349);
+    border-radius: 15px;
+    border-top:1px solid rgba(255,255,255,0.2);
+    border-left:1px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(5px);
+    background-color: rgba(7,7,7,0.1);
+    transform-style: preserve-3d;
+    transform: perspective(800px)
+  }
+  
+  @keyframes move-circle-1 {
+
+    0%{
+      transform:rotate(0deg)
+                translate(-15vh)
+                rotate(0deg);
+    }
+    100%{
+      transform:rotate(360deg)
+                translate(-15vh)
+                rotate(-360deg);
+    }
+  }
+  
+  @keyframes move-circle-2 {
+    0%{
+      transform:rotate(0deg)
+                translate(-5vh)
+                rotate(0deg);
+    }
+    100%{
+      transform:rotate(-360deg)
+                translate(-5vh)
+                rotate(360deg);
+    }
+  }
+  
+  
+  @keyframes move-circle-3 {
+    0%{
+      transform:rotate(0deg)
+                translate(-5vh)
+                rotate(0deg);
+    }
+    100%{
+      transform:rotate(360deg)
+                translate(-5vh)
+                rotate(-360deg);
+    }
+  }
+  
+  @keyframes move-circle-4 {
+    0%{
+      transform:rotate(0deg)
+                translate(-10vh)
+                rotate(0deg);
+    }
+    100%{
+      transform:rotate(-360deg)
+                translate(-10vh)
+                rotate(360deg);
+    }
+  }
